@@ -7,7 +7,7 @@ wire LED;
 
 //initialize output file
 initial begin
-  $dumpfile("counter.vcd");
+  $dumpfile("pulser.vcd");
   $dumpvars(0, counter_instance);
 end
 
