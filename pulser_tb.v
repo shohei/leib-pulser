@@ -1,5 +1,5 @@
 `timescale 10ns / 100ps
-module counter_tb;
+module pulser_tb;
 
 reg CLK ;
 reg RST ;
@@ -8,7 +8,7 @@ wire LED;
 //initialize output file
 initial begin
   $dumpfile("pulser.vcd");
-  $dumpvars(0, counter_instance);
+  $dumpvars(0, p);
 end
 
 //initialize CLK
@@ -30,6 +30,6 @@ initial begin
   #1000000 $finish;
 end
 
-counter counter_instance(CLK, RST, LED);
+pulser p(CLK, RST, LED);
 
 endmodule
