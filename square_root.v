@@ -57,7 +57,7 @@ assign       q[1]      = ~r1[11];
 //zero stage
 wire [10:0]  z0;
 assign       z0[10:2] = {q[1]} ? r1 : z1;
-assign       z0[1:0]   = z[3:2];
+assign       z0[1:0]   = z[1:0];
 wire [10:0]  r0        = z0 - {q[7:1],2'b01};
 assign       q[0]      = ~r0[10];
 
